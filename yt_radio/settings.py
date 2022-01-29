@@ -24,6 +24,8 @@ from decouple import config
 
 SECRET_KEY = config("SECRET_KEY")
 
+YT_KEY = config("YT_KEY")
+
 
 DEBUG = True
 

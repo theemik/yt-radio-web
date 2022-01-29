@@ -3,7 +3,7 @@ import requests
 import random
 import time
 from .models import Playlist, Video
-from config import YT_KEY
+from django.conf import settings
 from django.shortcuts import get_object_or_404
 from background_task import background
 from .models import Video, Playlist, CurrentData
@@ -36,7 +36,7 @@ def playlists_update():
             'regionCode': region_code,
             'videoCategoryId': 10,
             'maxResults': 10,
-            'key': YT_KEY
+            'key': settings.YT_KEY
         }
 
         data = requests.get(yt_url, params=data_params)
