@@ -1,0 +1,22 @@
+:root {
+    --chart-font-size: 1rem;
+    --label-font-size: 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+    :root {
+        --chart-font-size: 0.6rem;
+        --label-font-size: 0.7rem;
+    }
+}
+
+.chart-container {
+    width: 98vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: var(--chart-font-size);
+}
+
+.label {
+    font-size: var(--label-font-size);
+}

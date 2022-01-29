@@ -1,0 +1,59 @@
+/* Play button */
+:root {
+    --top-player-width: 65vw;
+    --top-player-height: calc(var(--top-player-width) / 16 * 9);
+    --play-button-container-width: 80vw;
+}
+
+@media only screen and (max-width: 900px) {
+    :root {
+        --top-player-width: 95vw;
+        --top-player-height: calc(var(--top-player-width) / 16 * 9);
+        --play-button-container-width: 98vw;
+    }
+}
+
+.button-container {
+    width: var(--play-button-container-width);
+    max-width: 1200px;
+    border-bottom: 1px solid black;
+    margin-top: 1rem;
+}
+
+.button img {
+    width: 2rem;
+    margin-right: 5px;
+}
+
+.button {
+    margin: 0 0 0 5px;
+    font-size: 2.5rem;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    margin-left: 10px;
+}
+
+.selected {
+    background-image: linear-gradient(to bottom, rgb(102, 102, 102), transparent);
+}
+
+/* Player */
+
+/* .player {
+    position: sticky;
+    padding: 0 50px;
+    top: 142px;
+    background-color:#3d3d3d;
+} */
+
+.player {
+    width: var(--top-player-width);
+    height: var(--top-player-height);
+}

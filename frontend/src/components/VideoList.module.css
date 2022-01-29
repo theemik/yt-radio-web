@@ -1,0 +1,16 @@
+:root {
+  --list-width: 80vw;
+}
+
+@media only screen and (max-width: 900px) {
+  .list ul {
+    --list-width: 98vw;
+  }
+}
+
+.list ul{
+  counter-reset: index;  
+  padding: 0;
+  width: var(--list-width);
+  max-width: 1200px;
+}

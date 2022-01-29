@@ -1,0 +1,32 @@
+.form-container {
+    width: 100%;
+    background:#2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-top: 1px solid black;
+}
+
+form {
+    margin: 5px;
+    color: rgb(182, 182, 182);
+}
+
+select {
+    outline:none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.year {
+    margin-right: 20px;
+}
+
+/* .option:hover,
+.option:focus,
+.option:active,
+.option:checked {
+  background: linear-gradient(#5A2569, #5A2569);
+} */

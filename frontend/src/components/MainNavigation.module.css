@@ -1,0 +1,91 @@
+:root {
+    --icon-display: none;
+    --text-display: block;
+    --logo-font-size: 2.3rem;
+    --side-links-padding: 5px;
+}
+
+@media only screen and (max-width: 470px) {
+    :root {
+        --icon-display: block;
+        --text-display: none;
+        --logo-font-size: 2rem;
+        --side-links-padding: 0;
+    }
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: #202020;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    align-items: center;
+}
+
+nav div {
+    flex: auto;
+    text-align: center;
+    flex-basis: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #c7c7c7;
+    transition-duration: 0.3s;
+}
+
+.logo-link {
+    font-size: var(--logo-font-size);
+    color: #3d3d3d;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+    max-width: 20rem;
+}
+
+.active-logo-link {
+    -webkit-text-stroke: 1px rgb(150, 150, 150);
+}
+
+.history {
+    text-align: end;
+    padding: 0 var(--side-links-padding) 0 0;
+}
+
+.top-videos {
+    text-align: start;
+    padding: 0 0 0 var(--side-links-padding);
+}
+
+.text {
+    display: var(--text-display);
+}
+
+.active-text {
+    color: red;
+}
+
+.text:hover {
+    color: red;
+}
+
+.history-icon {
+    background-image: url("./images/history.png");
+}
+
+.top-videos-icon {
+    background-image: url("./images/top.png");
+}
+
+.active-icon {
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 0, 0)) saturate(1000%);
+}
+
+.icon {
+    height: 2.3rem;
+    display: var(--icon-display);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,90 @@
+:root {
+    --country-list-width: 60vw;
+    --side-button-display: inline-block;
+}
+
+@media only screen and (max-width: 900px) {
+    :root {
+        --country-list-width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    :root {
+        --country-list-width: 90vw;
+        --side-button-display: none;
+    }
+}
+
+.list {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    /* position: sticky;
+    top: 80px; */
+    background-color: rgba(43, 43, 43, 1);
+    padding: 5px 0;
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: var(--country-list-width);
+    max-width: 700px;
+    overflow-x: scroll;
+    overflow-y: hide;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.list ul::-webkit-scrollbar {
+    display: none;
+}
+
+.list li {
+    display: inline-block;
+    border: 2px solid rgb(31, 31, 31);
+    border-radius: 20%;
+    margin: 0 5px;
+    color: rgb(223, 223, 223);
+    padding: 1px 7px;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.list li:not(.selected):hover {
+    background-color: rgb(54, 54, 54);
+}
+
+/* arrow buttons */
+.button {
+    width: 1.7rem;
+    height: 1.7rem;
+    color: #000000;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: var(--side-button-display);
+}
+
+.left-button {
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    box-shadow: 15px 0 10px rgb(43, 43, 43);
+}
+
+.right-button {
+    background-image: url('./images/arrowRight.png');
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    box-shadow: -15px 0 10px rgb(43, 43, 43);
+}
+
+.selected {
+    background-color: rgb(87, 87, 87);
+}
