@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 from background_task import background
 from .models import Video, Playlist, CurrentData
 from django.utils import timezone
-from background_task.models import CompletedTask
+from background_task.models import CompletedTask, Task
 
 
 def playlists_update():
@@ -87,12 +87,16 @@ def update(videos_ids_left=[], all_videos_ids=[]):
             'previous_video': previous,
             'next_video': next})
 
-        for x in range(video.duration):
-            print(x)
-            time.sleep(1)
+        # for x in range(video.duration):
+        #     print(x)
+        #     time.sleep(1)
+        time.sleep(video.duration)
         update(videos_ids_left, all_videos_ids, verbose_name='update')
     else:
+        # clean old tasks
+        Task.objects.all().delete()
         CompletedTask.objects.all().delete()
+        
         # get all videos id's from main playlist
         today = timezone.now().date()
 
