@@ -29,6 +29,8 @@ YT_KEY = config("YT_KEY")
 
 DEBUG = False
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
 ALLOWED_HOSTS = ['yt-radio-web.herokuapp.com', 'localhost', '127.0.0.1']
 
 
