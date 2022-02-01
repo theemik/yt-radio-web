@@ -27,7 +27,7 @@ SECRET_KEY = config("SECRET_KEY")
 YT_KEY = config("YT_KEY")
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['yt-radio-web.herokuapp.com', 'localhost', '127.0.0.1']
 
